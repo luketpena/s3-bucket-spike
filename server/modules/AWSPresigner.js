@@ -20,6 +20,8 @@ const Bucket = process.env.BUCKET_NAME;
 
 // GET URL Generator
 function generateGetUrl(Key) {
+  
+  
   return new Promise((resolve, reject) => {
     const params = {
       Bucket,
@@ -40,6 +42,7 @@ function generateGetUrl(Key) {
 
 // PUT URL Generator
 function generatePutUrl(Key, ContentType) {
+  console.log('Hello from generatePutUrl');
   return new Promise((resolve, reject) => {
     // Note Bucket is retrieved from the env variable above.
     const params = { Bucket, Key, ContentType };
@@ -50,6 +53,7 @@ function generatePutUrl(Key, ContentType) {
       }
       // If there is no errors we can send back the pre-signed PUT URL
       resolve(url);
+      console.log('Generated the url:',url);
     });
   });
 }

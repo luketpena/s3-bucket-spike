@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import Uploader from '../Uploader/Uploader';
+import DisplayImage from '../DisplayImage/DisplayImage';
+
 function App() {
   return (
     <div className="App">
-    hi
+    <Uploader />
+    <DisplayImage />
     </div>
   );
 }
